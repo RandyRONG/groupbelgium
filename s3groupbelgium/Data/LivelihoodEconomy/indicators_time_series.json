@@ -1,0 +1,706 @@
+{
+    "nuclear_production_rate": {
+        "ESP": {
+            "NN_importance_heatwaves": 0.2163473905416539,
+            "NN_importance_timeseries": 0.12303000230463783,
+            "LSTM_train_R2": 0.25770439857676053,
+            "LSTM_test_R2": -594.3207109014623,
+            "NN_test_mse": 0.0448731929063797,
+            "LSTM_test_mse": 0.5183942914009094
+        },
+        "FRA": {
+            "NN_importance_heatwaves": 0.01498806136884206,
+            "NN_importance_timeseries": 0.1435894324533172,
+            "LSTM_train_R2": -0.052332998305415046,
+            "LSTM_test_R2": -0.23020778409497833,
+            "NN_test_mse": 0.254114031791687,
+            "LSTM_test_mse": 0.11668937653303146
+        },
+        "HUN": {
+            "NN_importance_heatwaves": 0.0717209152308401,
+            "NN_importance_timeseries": 0.03113882230391778,
+            "LSTM_train_R2": 0.529289077159943,
+            "LSTM_test_R2": -0.11593449708226156,
+            "NN_test_mse": 0.7894531488418579,
+            "LSTM_test_mse": 0.08059282600879669
+        },
+        "CHE": {
+            "NN_importance_heatwaves": 0.020501229072632667,
+            "NN_importance_timeseries": 0.03656031512075457,
+            "LSTM_train_R2": 0.12275377369153595,
+            "LSTM_test_R2": -11.078343672362577,
+            "NN_test_mse": 0.8053564429283142,
+            "LSTM_test_mse": 2.1106719970703125
+        },
+        "GBR": {
+            "NN_importance_heatwaves": 0.07416212678329666,
+            "NN_importance_timeseries": 0.18119324010560214,
+            "LSTM_train_R2": 0.34229560435245965,
+            "LSTM_test_R2": -3.888046322430772,
+            "NN_test_mse": 0.04445294663310051,
+            "LSTM_test_mse": 0.04478280618786812
+        },
+        "DEU": {
+            "NN_importance_heatwaves": 0.05175303798482378,
+            "NN_importance_timeseries": 0.13110781744732086,
+            "LSTM_train_R2": 0.3691250881991007,
+            "LSTM_test_R2": -308.9323149416594,
+            "NN_test_mse": 0.2574354410171509,
+            "LSTM_test_mse": 2.5985875129699707
+        },
+        "SVK": {
+            "NN_importance_heatwaves": 0.049431439072350127,
+            "NN_importance_timeseries": 0.29765937639124534,
+            "LSTM_train_R2": 0.5188984383793798,
+            "LSTM_test_R2": -0.1361490710586044,
+            "NN_test_mse": 0.05524583160877228,
+            "LSTM_test_mse": 0.022754816338419914
+        },
+        "CZE": {
+            "NN_importance_heatwaves": 0.023882521767363156,
+            "NN_importance_timeseries": 0.26719144383809024,
+            "LSTM_train_R2": 0.5028420727652323,
+            "LSTM_test_R2": -47.041353747116155,
+            "NN_test_mse": 0.38594305515289307,
+            "LSTM_test_mse": 0.6202334761619568
+        },
+        "BEL": {
+            "NN_importance_heatwaves": 0.04258770690413808,
+            "NN_importance_timeseries": 0.10657116434478162,
+            "LSTM_train_R2": 0.4909282148379499,
+            "LSTM_test_R2": -2.4044108561735804,
+            "NN_test_mse": 0.833949863910675,
+            "LSTM_test_mse": 1.349063515663147
+        },
+        "NLD": {
+            "NN_importance_heatwaves": 0.038059496720469,
+            "NN_importance_timeseries": 0.04621410075430201,
+            "LSTM_train_R2": 0.4106501951210655,
+            "LSTM_test_R2": -0.7204604619294595,
+            "NN_test_mse": 0.11437855660915375,
+            "LSTM_test_mse": 0.1018548458814621
+        },
+        "SWE": {
+            "NN_importance_heatwaves": 0.09100621662813997,
+            "NN_importance_timeseries": 0.10007861963317126,
+            "LSTM_train_R2": -0.2651380531271841,
+            "LSTM_test_R2": -4.918035423137565,
+            "NN_test_mse": 0.26115548610687256,
+            "LSTM_test_mse": 1.287703275680542
+        },
+        "FIN": {
+            "NN_importance_heatwaves": 0.01051538121529746,
+            "NN_importance_timeseries": 0.052981848711966,
+            "LSTM_train_R2": 0.15039335307137924,
+            "LSTM_test_R2": -3.6457755741354685,
+            "NN_test_mse": 0.029738571494817734,
+            "LSTM_test_mse": 0.0707477405667305
+        }
+    },
+    "nuclear_consumption_rate": {
+        "ESP": {
+            "NN_importance_heatwaves": 0.13770527880876196,
+            "NN_importance_timeseries": 0.01683439610693847,
+            "LSTM_train_R2": 0.4072096833291621,
+            "LSTM_test_R2": -11.747768864758015,
+            "NN_test_mse": 2.463364839553833,
+            "LSTM_test_mse": 1.0072665214538574
+        },
+        "ISR": {
+            "NN_importance_heatwaves": 0.11971305709116398,
+            "NN_importance_timeseries": 0.23300843700960527,
+            "LSTM_train_R2": 0.5331852318995677,
+            "LSTM_test_R2": -21.631056108725836,
+            "NN_test_mse": 0.4171457886695862,
+            "LSTM_test_mse": 1.1750386953353882
+        },
+        "PRT": {
+            "NN_importance_heatwaves": 0.031029592501339028,
+            "NN_importance_timeseries": 0.06236835081586112,
+            "LSTM_train_R2": 0.0744731393083301,
+            "LSTM_test_R2": -8.103510632433174,
+            "NN_test_mse": 0.5313952565193176,
+            "LSTM_test_mse": 1.459909439086914
+        },
+        "GRC": {
+            "NN_importance_heatwaves": 0.1764593086310749,
+            "NN_importance_timeseries": 0.032903727812158376,
+            "LSTM_train_R2": 0.7753211690926782,
+            "LSTM_test_R2": -0.4719219339534564,
+            "NN_test_mse": 1.7960267066955566,
+            "LSTM_test_mse": 0.6088922023773193
+        },
+        "ITA": {
+            "NN_importance_heatwaves": 0.026784154715169782,
+            "NN_importance_timeseries": 0.08499156930926785,
+            "LSTM_train_R2": 0.39701976063513134,
+            "LSTM_test_R2": -6.759999687281634,
+            "NN_test_mse": 0.8617863059043884,
+            "LSTM_test_mse": 1.1404187679290771
+        },
+        "TUR": {
+            "NN_importance_heatwaves": 0.014969962585535918,
+            "NN_importance_timeseries": 0.02469994312246126,
+            "LSTM_train_R2": 0.08434483261305903,
+            "LSTM_test_R2": -3.650730082997482,
+            "NN_test_mse": 0.24587328732013702,
+            "LSTM_test_mse": 0.8478497266769409
+        },
+        "FRA": {
+            "NN_importance_heatwaves": 0.02368417724049745,
+            "NN_importance_timeseries": 0.22562205070219057,
+            "LSTM_train_R2": 0.644119765292843,
+            "LSTM_test_R2": -0.1507333018598307,
+            "NN_test_mse": 0.0845412164926529,
+            "LSTM_test_mse": 0.05694741755723953
+        },
+        "HUN": {
+            "NN_importance_heatwaves": 0.028918072115019795,
+            "NN_importance_timeseries": 0.03712808897814872,
+            "LSTM_train_R2": 0.17123059181804912,
+            "LSTM_test_R2": -50.1961540674111,
+            "NN_test_mse": 0.4001261591911316,
+            "LSTM_test_mse": 0.13184724748134613
+        },
+        "CHE": {
+            "NN_importance_heatwaves": 0.06873558259647274,
+            "NN_importance_timeseries": 0.06650337600985537,
+            "LSTM_train_R2": 0.4259138843692649,
+            "LSTM_test_R2": -0.628711040493972,
+            "NN_test_mse": 0.33590662479400635,
+            "LSTM_test_mse": 0.3232395052909851
+        },
+        "AUT": {
+            "NN_importance_heatwaves": 0.003290781012636579,
+            "NN_importance_timeseries": 0.08572490477631134,
+            "LSTM_train_R2": -0.07026302981308663,
+            "LSTM_test_R2": -9.82739140735015,
+            "NN_test_mse": 0.45515960454940796,
+            "LSTM_test_mse": 0.6431994438171387
+        },
+        "IRL": {
+            "NN_importance_heatwaves": 0.11862994331305217,
+            "NN_importance_timeseries": 0.06995299486845245,
+            "LSTM_train_R2": -0.9027247577743234,
+            "LSTM_test_R2": -24.39745903405456,
+            "NN_test_mse": 2.1880383491516113,
+            "LSTM_test_mse": 4.094667434692383
+        },
+        "GBR": {
+            "NN_importance_heatwaves": 0.03344460447242664,
+            "NN_importance_timeseries": 0.08183964455843747,
+            "LSTM_train_R2": 0.23033279952000763,
+            "LSTM_test_R2": -1.7448390542298662,
+            "NN_test_mse": 0.502444863319397,
+            "LSTM_test_mse": 0.3164479434490204
+        },
+        "DEU": {
+            "NN_importance_heatwaves": 0.021670281083596345,
+            "NN_importance_timeseries": 0.1640606372467053,
+            "LSTM_train_R2": 0.6444796173398656,
+            "LSTM_test_R2": -13.944875063285618,
+            "NN_test_mse": 0.06292154639959335,
+            "LSTM_test_mse": 0.38298922777175903
+        },
+        "SVK": {
+            "NN_importance_heatwaves": 0.21799273095090835,
+            "NN_importance_timeseries": 0.25165716709345043,
+            "LSTM_train_R2": 0.24823535250289752,
+            "LSTM_test_R2": -188.44209592754643,
+            "NN_test_mse": 0.03180317208170891,
+            "LSTM_test_mse": 1.4012339115142822
+        },
+        "CZE": {
+            "NN_importance_heatwaves": 0.14184594562994796,
+            "NN_importance_timeseries": 0.10931508558928393,
+            "LSTM_train_R2": 0.45879153214900614,
+            "LSTM_test_R2": -133.4180795887914,
+            "NN_test_mse": 0.9065942764282227,
+            "LSTM_test_mse": 1.42095947265625
+        },
+        "POL": {
+            "NN_importance_heatwaves": 0.10268236595824547,
+            "NN_importance_timeseries": 0.07720552864420983,
+            "LSTM_train_R2": -0.8315651048352519,
+            "LSTM_test_R2": 0.2901967745434546,
+            "NN_test_mse": 3.6171932220458984,
+            "LSTM_test_mse": 0.6507644057273865
+        },
+        "BEL": {
+            "NN_importance_heatwaves": 0.14495593243960592,
+            "NN_importance_timeseries": 0.044176233884824764,
+            "LSTM_train_R2": 0.1374611380974603,
+            "LSTM_test_R2": -0.3177612717385312,
+            "NN_test_mse": 4.414732456207275,
+            "LSTM_test_mse": 2.3680453300476074
+        },
+        "LUX": {
+            "NN_importance_heatwaves": 0.013022835824483154,
+            "NN_importance_timeseries": 0.2486914111249674,
+            "LSTM_train_R2": 0.2564169957908541,
+            "LSTM_test_R2": 0.29570354564010326,
+            "NN_test_mse": 0.04127861559391022,
+            "LSTM_test_mse": 0.04788961261510849
+        },
+        "NLD": {
+            "NN_importance_heatwaves": 0.10917366867405076,
+            "NN_importance_timeseries": 0.03483899145755368,
+            "LSTM_train_R2": 0.6814430966589824,
+            "LSTM_test_R2": -3.521658770974554,
+            "NN_test_mse": 0.9401724338531494,
+            "LSTM_test_mse": 1.0766226053237915
+        },
+        "ISL": {
+            "NN_importance_heatwaves": 0.032947275095874515,
+            "NN_importance_timeseries": 0.4266223548096878,
+            "LSTM_train_R2": 0.19765301308531413,
+            "LSTM_test_R2": -34.41416405913453,
+            "NN_test_mse": 0.017874618992209435,
+            "LSTM_test_mse": 0.10025546699762344
+        },
+        "DNK": {
+            "NN_importance_heatwaves": 0.14133023214152676,
+            "NN_importance_timeseries": 0.13304829164388404,
+            "LSTM_train_R2": 0.5946874816983042,
+            "LSTM_test_R2": -11.997975204637537,
+            "NN_test_mse": 0.254124253988266,
+            "LSTM_test_mse": 3.365659236907959
+        },
+        "SWE": {
+            "NN_importance_heatwaves": 0.11166292102469307,
+            "NN_importance_timeseries": 0.016467877208953745,
+            "LSTM_train_R2": 0.27573906184288255,
+            "LSTM_test_R2": -0.12038195991653078,
+            "NN_test_mse": 0.6998103857040405,
+            "LSTM_test_mse": 0.1374630331993103
+        },
+        "NOR": {
+            "NN_importance_heatwaves": 0.03522847627765748,
+            "NN_importance_timeseries": 0.14350278021098162,
+            "LSTM_train_R2": 0.17829087367340435,
+            "LSTM_test_R2": -26.62831566515687,
+            "NN_test_mse": 0.02669074572622776,
+            "LSTM_test_mse": 0.37723109126091003
+        },
+        "FIN": {
+            "NN_importance_heatwaves": 0.010629029805565876,
+            "NN_importance_timeseries": 0.023108236909663165,
+            "LSTM_train_R2": 0.060131438455672814,
+            "LSTM_test_R2": -5.975313916073757,
+            "NN_test_mse": 0.6119369864463806,
+            "LSTM_test_mse": 0.9604743719100952
+        }
+    },
+    "fish_catches": {
+        "ESP": {
+            "NN_importance_heatwaves": 0.010237349039924081,
+            "NN_importance_timeseries": 0.5198662070727662,
+            "LSTM_train_R2": -0.08270429555135861,
+            "LSTM_test_R2": -0.5141199308163205,
+            "NN_test_mse": 2.3889081478118896,
+            "LSTM_test_mse": 1.757144570350647
+        },
+        "PRT": {
+            "NN_importance_heatwaves": 0.2345746186515143,
+            "NN_importance_timeseries": -0.07863979214437833,
+            "LSTM_train_R2": -0.026770186624160752,
+            "LSTM_test_R2": -3.066178825462898,
+            "NN_test_mse": 2.6856889724731445,
+            "LSTM_test_mse": 1.6598137617111206
+        },
+        "FRA": {
+            "NN_importance_heatwaves": 0.38585256988343264,
+            "NN_importance_timeseries": 0.0412764268724317,
+            "LSTM_train_R2": -0.008203434921904451,
+            "LSTM_test_R2": -0.03552286523631487,
+            "NN_test_mse": 1.2855660915374756,
+            "LSTM_test_mse": 0.24903738498687744
+        },
+        "IRL": {
+            "NN_importance_heatwaves": -0.017271368693943003,
+            "NN_importance_timeseries": 0.10062627498034563,
+            "LSTM_train_R2": 0.10280191205518752,
+            "LSTM_test_R2": -0.15152444777527907,
+            "NN_test_mse": 1.5833981037139893,
+            "LSTM_test_mse": 0.49530479311943054
+        },
+        "GBR": {
+            "NN_importance_heatwaves": 0.12829732950800182,
+            "NN_importance_timeseries": 0.03555947495388116,
+            "LSTM_train_R2": -0.3456486271040926,
+            "LSTM_test_R2": -1.3182276802349095,
+            "NN_test_mse": 12.03596305847168,
+            "LSTM_test_mse": 15.51242446899414
+        },
+        "DEU": {
+            "NN_importance_heatwaves": -0.05485751838669746,
+            "NN_importance_timeseries": 0.016953983470621936,
+            "LSTM_train_R2": -4.747592891728082,
+            "LSTM_test_R2": -9.546921456489587,
+            "NN_test_mse": 1.5202536582946777,
+            "LSTM_test_mse": 1.3979002237319946
+        },
+        "POL": {
+            "NN_importance_heatwaves": -0.08799264332139756,
+            "NN_importance_timeseries": -0.026616123935702618,
+            "LSTM_train_R2": -0.33190090828778596,
+            "LSTM_test_R2": -0.3754946108208175,
+            "NN_test_mse": 1.7119646072387695,
+            "LSTM_test_mse": 0.37400534749031067
+        },
+        "GGY": {
+            "NN_importance_heatwaves": -0.017783001146529386,
+            "NN_importance_timeseries": -0.013647087028387411,
+            "LSTM_train_R2": -2.0662924995204817,
+            "LSTM_test_R2": 0.08755323671130966,
+            "NN_test_mse": 2.941640853881836,
+            "LSTM_test_mse": 0.4129530191421509
+        },
+        "BEL": {
+            "NN_importance_heatwaves": 0.09406057773725493,
+            "NN_importance_timeseries": 0.013419501339669293,
+            "LSTM_train_R2": 0.28658442194614897,
+            "LSTM_test_R2": -0.40592244752670803,
+            "NN_test_mse": 2.54620361328125,
+            "LSTM_test_mse": 1.7841956615447998
+        },
+        "NLD": {
+            "NN_importance_heatwaves": -0.09537322134997706,
+            "NN_importance_timeseries": -0.15820245913928432,
+            "LSTM_train_R2": 0.4649143173258682,
+            "LSTM_test_R2": -6.541340026214177,
+            "NN_test_mse": 1.837296962738037,
+            "LSTM_test_mse": 2.567445755004883
+        },
+        "ISL": {
+            "NN_importance_heatwaves": -0.09536806377940824,
+            "NN_importance_timeseries": 0.032130535499022825,
+            "LSTM_train_R2": -0.09600688888227804,
+            "LSTM_test_R2": -0.29871742291549674,
+            "NN_test_mse": 2.1353251934051514,
+            "LSTM_test_mse": 1.0378621816635132
+        },
+        "RUS": {
+            "NN_importance_heatwaves": -0.12831377988916504,
+            "NN_importance_timeseries": 0.008037518765202756,
+            "LSTM_train_R2": 0.22312750948908033,
+            "LSTM_test_R2": -0.18140838338504972,
+            "NN_test_mse": 1.0446906089782715,
+            "LSTM_test_mse": 0.19813290238380432
+        },
+        "IMN": {
+            "NN_importance_heatwaves": 0.001061622744007129,
+            "NN_importance_timeseries": -0.03573432311839543,
+            "LSTM_train_R2": -0.16747402324520966,
+            "LSTM_test_R2": -3.7413453660524416,
+            "NN_test_mse": 1.5071685314178467,
+            "LSTM_test_mse": 0.3304251730442047
+        },
+        "LTU": {
+            "NN_importance_heatwaves": 0.07547858506565183,
+            "NN_importance_timeseries": 0.014308237328937424,
+            "LSTM_train_R2": -0.26999238500074996,
+            "LSTM_test_R2": -0.41722879746800334,
+            "NN_test_mse": 1.138800859451294,
+            "LSTM_test_mse": 0.8700858354568481
+        },
+        "DNK": {
+            "NN_importance_heatwaves": 0.009230580080275875,
+            "NN_importance_timeseries": 0.09938314525689478,
+            "LSTM_train_R2": 0.12663926113657598,
+            "LSTM_test_R2": -3.333293723327479,
+            "NN_test_mse": 1.3648147583007812,
+            "LSTM_test_mse": 3.615943193435669
+        },
+        "SWE": {
+            "NN_importance_heatwaves": 0.059604775714096406,
+            "NN_importance_timeseries": -0.00020475668311042972,
+            "LSTM_train_R2": -1.5520373113835944,
+            "LSTM_test_R2": -57.19017695308033,
+            "NN_test_mse": 5.8637590408325195,
+            "LSTM_test_mse": 8.066176414489746
+        },
+        "LVA": {
+            "NN_importance_heatwaves": -0.15300903028666754,
+            "NN_importance_timeseries": 0.006793470656891976,
+            "LSTM_train_R2": 0.08450681463856335,
+            "LSTM_test_R2": -137.2533169500747,
+            "NN_test_mse": 10.246164321899414,
+            "LSTM_test_mse": 16.297611236572266
+        },
+        "NOR": {
+            "NN_importance_heatwaves": 0.11416106403865256,
+            "NN_importance_timeseries": 0.02458780434396134,
+            "LSTM_train_R2": -0.08784045685929098,
+            "LSTM_test_R2": -11.276866367056705,
+            "NN_test_mse": 4.834341049194336,
+            "LSTM_test_mse": 2.468440294265747
+        },
+        "EST": {
+            "NN_importance_heatwaves": -0.014250412776622045,
+            "NN_importance_timeseries": 0.011329481006872689,
+            "LSTM_train_R2": -8.341014696843706,
+            "LSTM_test_R2": -19.218060803922423,
+            "NN_test_mse": 6.313382625579834,
+            "LSTM_test_mse": 8.06057357788086
+        },
+        "FIN": {
+            "NN_importance_heatwaves": 0.019539948484431736,
+            "NN_importance_timeseries": 0.06600582991094327,
+            "LSTM_train_R2": -0.45098474526681076,
+            "LSTM_test_R2": -4.832280469216846,
+            "NN_test_mse": 7.2133049964904785,
+            "LSTM_test_mse": 11.353713035583496
+        },
+        "FRO": {
+            "NN_importance_heatwaves": -0.018885809723853852,
+            "NN_importance_timeseries": 0.050956846941207314,
+            "LSTM_train_R2": -0.02876765543748583,
+            "LSTM_test_R2": -0.9626562939291097,
+            "NN_test_mse": 0.29305875301361084,
+            "LSTM_test_mse": 0.5207250118255615
+        }
+    },
+    "inflation_consumer_price": {
+        "ESP": {
+            "NN_importance_heatwaves": 0.05289524515848878,
+            "NN_importance_timeseries": 0.0542673879511534,
+            "LSTM_train_R2": -0.04458056670272925,
+            "LSTM_test_R2": -8.326420652703316,
+            "NN_test_mse": 0.07250315696001053,
+            "LSTM_test_mse": 0.313283771276474
+        },
+        "MAR": {
+            "NN_importance_heatwaves": -0.0033263850103017025,
+            "NN_importance_timeseries": 0.12944683186991038,
+            "LSTM_train_R2": 0.19263814006495383,
+            "LSTM_test_R2": -2.2880962476894084,
+            "NN_test_mse": 0.06264035403728485,
+            "LSTM_test_mse": 0.08998659253120422
+        },
+        "DZA": {
+            "NN_importance_heatwaves": 0.08347259689236815,
+            "NN_importance_timeseries": 0.24992395227585046,
+            "LSTM_train_R2": -0.12473206778124002,
+            "LSTM_test_R2": -16.706127257525964,
+            "NN_test_mse": 0.03866357356309891,
+            "LSTM_test_mse": 0.20431822538375854
+        },
+        "ISR": {
+            "NN_importance_heatwaves": 0.027587314131881258,
+            "NN_importance_timeseries": 0.03790263053705939,
+            "LSTM_train_R2": 0.6625447196094502,
+            "LSTM_test_R2": -31.466964834962113,
+            "NN_test_mse": 0.06469057500362396,
+            "LSTM_test_mse": 0.0173798780888319
+        },
+        "PRT": {
+            "NN_importance_heatwaves": 0.026193601135935662,
+            "NN_importance_timeseries": 0.18864893726835255,
+            "LSTM_train_R2": 0.6449368316284823,
+            "LSTM_test_R2": -53.842588483460375,
+            "NN_test_mse": 0.003690469777211547,
+            "LSTM_test_mse": 0.1594194769859314
+        },
+        "TUN": {
+            "NN_importance_heatwaves": 0.0760463401513958,
+            "NN_importance_timeseries": 0.25793826010085913,
+            "LSTM_train_R2": 0.2764586760406683,
+            "LSTM_test_R2": 0.17133386648444004,
+            "NN_test_mse": 0.5946434736251831,
+            "LSTM_test_mse": 0.17136241495609283
+        },
+        "CYP": {
+            "NN_importance_heatwaves": 0.1163462903775109,
+            "NN_importance_timeseries": -0.008284798651687927,
+            "LSTM_train_R2": 0.14692522750286385,
+            "LSTM_test_R2": -1.9897381996291412,
+            "NN_test_mse": 0.26055651903152466,
+            "LSTM_test_mse": 0.1732560098171234
+        },
+        "GRC": {
+            "NN_importance_heatwaves": 0.08379415056002577,
+            "NN_importance_timeseries": 0.14048707961248894,
+            "LSTM_train_R2": -0.008942520064272319,
+            "LSTM_test_R2": -149.60362688717086,
+            "NN_test_mse": 0.003415062092244625,
+            "LSTM_test_mse": 0.503850519657135
+        },
+        "ITA": {
+            "NN_importance_heatwaves": 0.19969128719488796,
+            "NN_importance_timeseries": 0.08112028117946617,
+            "LSTM_train_R2": 0.3462411722839994,
+            "LSTM_test_R2": -13.540790376894629,
+            "NN_test_mse": 0.034425683319568634,
+            "LSTM_test_mse": 0.3902130722999573
+        },
+        "MLT": {
+            "NN_importance_heatwaves": 0.02398330103662232,
+            "NN_importance_timeseries": 0.05343827651005191,
+            "LSTM_train_R2": -0.034805534128167004,
+            "LSTM_test_R2": -21.38885840548252,
+            "NN_test_mse": 0.053947631269693375,
+            "LSTM_test_mse": 0.7066135406494141
+        },
+        "TUR": {
+            "NN_importance_heatwaves": 0.05541397426545804,
+            "NN_importance_timeseries": 0.46220314540507645,
+            "LSTM_train_R2": 0.3345667696495699,
+            "LSTM_test_R2": -3.452901589130107,
+            "NN_test_mse": 0.04952849820256233,
+            "LSTM_test_mse": 0.020900556817650795
+        },
+        "FRA": {
+            "NN_importance_heatwaves": 0.06754786619455497,
+            "NN_importance_timeseries": 0.10294793560441909,
+            "LSTM_train_R2": 0.18836461056323817,
+            "LSTM_test_R2": -1.0602886267639087,
+            "NN_test_mse": 0.18851961195468903,
+            "LSTM_test_mse": 0.24013270437717438
+        },
+        "BGR": {
+            "NN_importance_heatwaves": 0.0005916089188317652,
+            "NN_importance_timeseries": 0.02361628459196339,
+            "LSTM_train_R2": -0.03809745509398699,
+            "LSTM_test_R2": -4811.416967181777,
+            "NN_test_mse": 0.16513562202453613,
+            "LSTM_test_mse": 0.04090569168329239
+        },
+        "HRV": {
+            "NN_importance_heatwaves": 0.08565274567034367,
+            "NN_importance_timeseries": 0.029300890959919307,
+            "LSTM_train_R2": -0.2180537377302465,
+            "LSTM_test_R2": -128685.38063063107,
+            "NN_test_mse": 0.011913501657545567,
+            "LSTM_test_mse": 0.23388032615184784
+        },
+        "SVN": {
+            "NN_importance_heatwaves": 0.009879679947250475,
+            "NN_importance_timeseries": 0.04571069053976675,
+            "LSTM_train_R2": 0.0030079125580255717,
+            "LSTM_test_R2": -1035.7335913626005,
+            "NN_test_mse": 0.0011439055670052767,
+            "LSTM_test_mse": 0.0013261022977530956
+        },
+        "HUN": {
+            "NN_importance_heatwaves": 0.09601418631555957,
+            "NN_importance_timeseries": 0.14860161903314398,
+            "LSTM_train_R2": 0.3835172092936736,
+            "LSTM_test_R2": -4.000100641404285,
+            "NN_test_mse": 0.038017597049474716,
+            "LSTM_test_mse": 0.020338520407676697
+        },
+        "CHE": {
+            "NN_importance_heatwaves": 0.14713011314401794,
+            "NN_importance_timeseries": 0.04468778276455894,
+            "LSTM_train_R2": 0.39374114804806504,
+            "LSTM_test_R2": -2.643313988325723,
+            "NN_test_mse": 0.04119349271059036,
+            "LSTM_test_mse": 0.07378311455249786
+        },
+        "AUT": {
+            "NN_importance_heatwaves": 0.08534129095558748,
+            "NN_importance_timeseries": 0.1398615968371199,
+            "LSTM_train_R2": -0.011735757058839669,
+            "LSTM_test_R2": -2.7789609198384775,
+            "NN_test_mse": 0.0864766389131546,
+            "LSTM_test_mse": 0.2736131548881531
+        },
+        "IRL": {
+            "NN_importance_heatwaves": 0.02040434379906708,
+            "NN_importance_timeseries": 0.01740551918004054,
+            "LSTM_train_R2": -0.059476488259857074,
+            "LSTM_test_R2": -31.34291242017104,
+            "NN_test_mse": 0.006592974066734314,
+            "LSTM_test_mse": 0.14278586208820343
+        },
+        "GBR": {
+            "NN_importance_heatwaves": 0.04486838920233197,
+            "NN_importance_timeseries": 0.1297698499625244,
+            "LSTM_train_R2": 0.38755173540454313,
+            "LSTM_test_R2": 0.18375187439567187,
+            "NN_test_mse": 0.03329893574118614,
+            "LSTM_test_mse": 0.019408388063311577
+        },
+        "DEU": {
+            "NN_importance_heatwaves": 0.021025699718383948,
+            "NN_importance_timeseries": 0.1195845026140148,
+            "LSTM_train_R2": 0.29256160300005896,
+            "LSTM_test_R2": -0.0542854388811278,
+            "NN_test_mse": 0.03029174730181694,
+            "LSTM_test_mse": 0.035472698509693146
+        },
+        "POL": {
+            "NN_importance_heatwaves": 0.014440358688469244,
+            "NN_importance_timeseries": 0.06966704567373906,
+            "LSTM_train_R2": 0.15705720475145268,
+            "LSTM_test_R2": -59.368977283668805,
+            "NN_test_mse": 0.0004489391576498747,
+            "LSTM_test_mse": 0.0010394749697297812
+        },
+        "BEL": {
+            "NN_importance_heatwaves": 0.027011549724471912,
+            "NN_importance_timeseries": 0.022540980721550828,
+            "LSTM_train_R2": -0.008135333424160951,
+            "LSTM_test_R2": -0.10086365465786296,
+            "NN_test_mse": 0.0245702862739563,
+            "LSTM_test_mse": 0.015710577368736267
+        },
+        "LUX": {
+            "NN_importance_heatwaves": 0.005950955807733143,
+            "NN_importance_timeseries": 0.08598211874193018,
+            "LSTM_train_R2": 0.093270134956843,
+            "LSTM_test_R2": -1.7062644201916553,
+            "NN_test_mse": 0.11204738914966583,
+            "LSTM_test_mse": 0.29548314213752747
+        },
+        "NLD": {
+            "NN_importance_heatwaves": 0.006095832658685738,
+            "NN_importance_timeseries": 0.09579056018737667,
+            "LSTM_train_R2": 0.13723846541181384,
+            "LSTM_test_R2": -0.02822280253164644,
+            "NN_test_mse": 0.0919274315237999,
+            "LSTM_test_mse": 0.119948610663414
+        },
+        "ISL": {
+            "NN_importance_heatwaves": 0.07831057440925192,
+            "NN_importance_timeseries": 0.16009994448755838,
+            "LSTM_train_R2": 0.30519149800998524,
+            "LSTM_test_R2": -6.3745163419275475,
+            "NN_test_mse": 0.04247349128127098,
+            "LSTM_test_mse": 0.016541803255677223
+        },
+        "DNK": {
+            "NN_importance_heatwaves": 0.05630301774349269,
+            "NN_importance_timeseries": 0.05482075079184469,
+            "LSTM_train_R2": -0.21153600781526372,
+            "LSTM_test_R2": -65.21246612270153,
+            "NN_test_mse": 0.20873498916625977,
+            "LSTM_test_mse": 1.4597960710525513
+        },
+        "SWE": {
+            "NN_importance_heatwaves": 0.004195074654754638,
+            "NN_importance_timeseries": 0.11752698208624637,
+            "LSTM_train_R2": 0.05467527570851938,
+            "LSTM_test_R2": -25.522264977401807,
+            "NN_test_mse": 0.0945875272154808,
+            "LSTM_test_mse": 0.12871141731739044
+        },
+        "NOR": {
+            "NN_importance_heatwaves": -0.012003502961337228,
+            "NN_importance_timeseries": 0.21164755995425716,
+            "LSTM_train_R2": -0.06268474331636797,
+            "LSTM_test_R2": -0.8140574675620977,
+            "NN_test_mse": 0.10065723210573196,
+            "LSTM_test_mse": 0.04361934959888458
+        },
+        "FIN": {
+            "NN_importance_heatwaves": -0.0020360895667925925,
+            "NN_importance_timeseries": 0.1722560845065194,
+            "LSTM_train_R2": 0.11754573384459888,
+            "LSTM_test_R2": -36.5271710651313,
+            "NN_test_mse": 0.04374716803431511,
+            "LSTM_test_mse": 0.26720890402793884
+        }
+    }
+}
