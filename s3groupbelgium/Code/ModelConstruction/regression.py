@@ -11,7 +11,7 @@ from sklearn.metrics import mean_squared_error
 from math import sqrt
 import matplotlib.pyplot as plt
 
-def LGBMRegression(df,target_name,drop_cols,record_indicators):
+def LGBMRegression(df,target_name,drop_cols,record_indicators,test_portion,val_portion,cv_search,dict_hw_importance):
 
     record_indicators[target_name] = {}
     df_test = df.sample(frac=test_portion)
@@ -88,9 +88,9 @@ def LGBMRegression(df,target_name,drop_cols,record_indicators):
     print (params)
     gbm = lgb.train(params,  
                     lgb_train,  
-                    num_boost_round=1500,   # max training epoches
+                    num_boost_round=500,   # max training epoches
                     valid_sets=lgb_eval, 
-                    early_stopping_rounds=1000) # to which epoch to check early_stopping)  
+                    early_stopping_rounds=100) # to which epoch to check early_stopping)  
 
     # print('Start predicting...')  
     importance = gbm.feature_importance()
@@ -209,7 +209,6 @@ if __name__ =='__main__':
     # df_final_2 = Final2Preprocess(df_final_2,population_dict,hw_dict,'ISO','Year',country_dict)
     df_final = Final2Preprocess(df_final,population_dict,hw_dict,'COUNTRY','YEAR',country_dict)
     record_indicators = {}
-    # record_indicators = LGBMRegression(df_final_2,'Total Deaths',['Country','ISO'],record_indicators)
 
     death_indicators = ['death_diabetes_65','death_cerebrovascular_65','death_respiratory_65','death_external','death_internal','death_all']
     drop_cols_ = ['COUNTRY']
@@ -217,7 +216,7 @@ if __name__ =='__main__':
 
     
     for death_indicator in death_indicators:
-        record_indicators = LGBMRegression(df_final,death_indicator,drop_cols_,record_indicators)
+        record_indicators = LGBMRegression(df_final,death_indicator,drop_cols_,record_indicators,test_portion,val_portion,cv_search,dict_hw_importance)
     
     print (dict_hw_importance)
     print (record_indicators)

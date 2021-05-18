@@ -2,6 +2,8 @@ import os
 import json
 import numpy as np
 import pandas as pd
+import matplotlib
+matplotlib.use("qt4agg")
 import matplotlib.pyplot as plt
 from copy import deepcopy
 
@@ -16,7 +18,7 @@ import eli5
 from eli5.sklearn import PermutationImportance
 
 
-def TimeSeriesNN(epochs,record_indicators,target_name,stat_country,df_time_series):
+def TimeSeriesNN(epochs,record_indicators,target_name,stat_country,df_time_series,split_date):
     record_indicators[target_name][stat_country] = {}
     selected_df = df_time_series[[i for i in df_time_series.columns if i.startswith(stat_country)]]
     train = selected_df.loc[:split_date]
@@ -77,8 +79,8 @@ def TimeSeriesNN(epochs,record_indicators,target_name,stat_country,df_time_serie
 
     print("The R2 score on the Train set is:\t{:0.3f}".format(r2_score(y_train, y_train_pred_lstm)))
     print("The R2 score on the Test set is:\t{:0.3f}".format(r2_score(y_test, y_pred_test_lstm)))
-    record_indicators[target_name][stat_country]['LSTM_train_R2'] = r2_score(y_train, y_train_pred_lstm)
-    record_indicators[target_name][stat_country]['LSTM_test_R2'] = r2_score(y_test, y_pred_test_lstm)
+    # record_indicators[target_name][stat_country]['LSTM_train_R2'] = r2_score(y_train, y_train_pred_lstm)
+    # record_indicators[target_name][stat_country]['LSTM_test_R2'] = r2_score(y_test, y_pred_test_lstm)
 
     nn_test_mse = nn_model.evaluate(X_test, y_test, batch_size=1)
     lstm_test_mse = lstm_model.evaluate(X_test_lmse, y_test, batch_size=1)
@@ -99,6 +101,7 @@ def TimeSeriesNN(epochs,record_indicators,target_name,stat_country,df_time_serie
     plt.ylabel('Adj Close Scaled')
     plt.legend()
     # plt.show();
+    plt.close() 
 
     plt.figure(figsize=(10, 6))
     plt.plot(y_test, label='True')
@@ -108,7 +111,8 @@ def TimeSeriesNN(epochs,record_indicators,target_name,stat_country,df_time_serie
     plt.ylabel('Adj Close Scaled')
     plt.legend()
     # plt.show();
-    return record_indicators
+    plt.close() 
+    return record_indicators,[list(test.index),y_test,y_pred_test_nn]
 
 if __name__ == '__main__':
     root_dir = '../../Data/LivelihoodEconomy/'
@@ -173,7 +177,7 @@ if __name__ == '__main__':
         for stat_country in stat_countries:
             # if stat_country != chosen_country_code:
             #     continue
-            record_indicators=TimeSeriesNN(epochs,record_indicators,target_name,stat_country,df_time_series)
+            record_indicators=TimeSeriesNN(epochs,record_indicators,target_name,stat_country,df_time_series,split_date)
 
     print (record_indicators)
 

@@ -91,4 +91,6 @@ if __name__ == '__main__':
     record_df.insert(0, 'alpha_3_code', alpha_3_code_list)
     record_df.insert(0, 'country_name', country_name_list)
 
+    record_df = record_df.drop(['LB'],axis=0)
+
     record_df.to_csv(out_df_path)

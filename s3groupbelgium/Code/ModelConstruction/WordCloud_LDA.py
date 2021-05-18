@@ -21,8 +21,11 @@ import gensim
 from gensim.corpora import Dictionary
 from PIL import Image 
 from wordcloud import WordCloud, ImageColorGenerator
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+from pdtext.tm import topic_words
+from sklearn.decomposition import LatentDirichletAllocation
 
-def WordCloudDraw(df_tfidf):
+def WordCloudDraw(df_tfidf,words_range,picture_path,output_pic_path,mode):
     word_cn_list_2 = []
 
     for j in range(0,df_tfidf.shape[0]):
@@ -51,11 +54,12 @@ def WordCloudDraw(df_tfidf):
     
 
     wc.to_file(output_pic_path) 
-    plt.imshow(wc) 
-    plt.axis('off') 
-    plt.show() 
+    if mode == 'show':
+        plt.imshow(wc) 
+        plt.axis('off') 
+        plt.show() 
 
-def GetTFIDF(list_words):
+def GetTFIDF(list_words,words_range,min_count):
     doc_frequency=defaultdict(int)
     for word_list in list_words:
         for i in word_list:
@@ -84,7 +88,7 @@ def GetTFIDF(list_words):
 
     dict_feature_select=sorted(word_tf_idf.items(),key=operator.itemgetter(1),reverse=True)[:words_range]
     df_tfidf = pd.DataFrame(dict_feature_select, columns=['word', 'TF-IDF']) 
-    df_tfidf.to_csv('output.csv',index=False)
+    # df_tfidf.to_csv('output.csv',index=False)
     print (df_tfidf)
     return df_tfidf
 
@@ -101,7 +105,7 @@ def get_wordnet_pos(treebank_tag):
     else:
         return ''
 
-def merge(words,lmtzr):
+def merge(words,lmtzr,rejected_words,words_dict):
     words_list = []
     
     for word in words:
@@ -176,13 +180,13 @@ def replace_abbreviations(text):
     return new_text
 
 
-def get_words(text):  
+def get_words(text,rejected_words,words_dict):  
     lmtzr = WordNetLemmatizer()
-    words_list = (merge(replace_abbreviations(text).split(),lmtzr))
+    words_list = (merge(replace_abbreviations(text).split(),lmtzr,rejected_words,words_dict))
     text = ' '.join(words_list)
     return text
 
-def text_prepare(text):
+def text_prepare(text,rejected_words,not_related_words,words_dict):
     text = text.lower() 
     REPLACE_BY_SPACE_RE = re.compile('[/(){}\[\]\|@#+,;]') 
     BAD_SYMBOLS_RE = re.compile('[^0-9a-z #+_]')
@@ -193,10 +197,26 @@ def text_prepare(text):
     for not_related_word in not_related_words:
         if not_related_word in text.split():
             return []
-    text = get_words(text)   
+    text = get_words(text,rejected_words,words_dict)   
     STOPWORDS = set(stopwords.words('english'))
     words = [w for w in replace_abbreviations(text).split() if w not in STOPWORDS and len(w)>2]
     return words
+
+def LDAModel(texts,num_topics,min_count):
+    vect = CountVectorizer(min_df=min_count, 
+                       max_df=0.9,
+                      max_features=1000)
+    vect.fit(texts)
+    tf = vect.transform(texts)
+    lda_model = LatentDirichletAllocation(n_components   = num_topics,
+                                      max_iter       = 10,
+                                    #   evaluate_every = 5,
+                                    #   verbose = 2,
+                                    #   n_jobs= 2,
+                                     )
+    lda_model.fit(tf)
+    topic_df = topic_words(lda_model, vect)
+    return topic_df
 
 if __name__ == '__main__':
     
@@ -214,16 +234,18 @@ if __name__ == '__main__':
     not_related_words = ['dnf','dream','fcu']
 
     words_dict = {}
-    text_list = [text_prepare(x) for x in text_list]
+    text_list = [text_prepare(x,rejected_words,not_related_words,words_dict) for x in text_list]
     text_list = [x for x in text_list if len(x)>0 ]
     # print (text_list)
     print (len(text_list))
-    df_tfidf = GetTFIDF(text_list)
-    WordCloudDraw(df_tfidf)
+    df_tfidf = GetTFIDF(text_list,words_range,min_count)
+    WordCloudDraw(df_tfidf,words_range,picture_path,output_pic_path,'show')
     dictionary = Dictionary(text_list)
     corpus = [dictionary.doc2bow(text) for text in text_list]
     ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics=3, id2word = dictionary, passes=20) 
     print(ldamodel.print_topics(num_topics=num_topics, num_words=num_words))
+    topic_df = LDAModel([' '.join(i) for i in text_list],num_topics,min_count)
+    print (topic_df)
 
 
 
