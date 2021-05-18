@@ -112,7 +112,7 @@ def TimeSeriesNN(epochs,record_indicators,target_name,stat_country,df_time_serie
     plt.legend()
     # plt.show();
     plt.close() 
-    return record_indicators,[list(test.index),y_test,y_pred_test_nn]
+    return record_indicators,[list(test.index),y_test,[i[0] for i in y_pred_test_nn]]
 
 if __name__ == '__main__':
     root_dir = '../../Data/LivelihoodEconomy/'
