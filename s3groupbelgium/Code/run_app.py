@@ -507,7 +507,7 @@ text_list = [x for x in text_list if len(x)>0 ]
 def ResultsNLP(words_range,num_topics,min_count):
     global text_list,picture_path,output_pic_path
     df_tfidf = WordCloud_LDA.GetTFIDF(text_list,words_range,min_count)
-    WordCloud_LDA.WordCloudDraw(df_tfidf,words_range,picture_path,output_pic_path,'noshow')
+    WordCloud_LDA.WordCloudDraw(df_tfidf,words_range,picture_path,output_pic_path,sc_root,'noshow')
     encoded_image = base64.b64encode(open(output_pic_path, 'rb').read()).decode('ascii')
     print (text_list[:10])
     topic_df = WordCloud_LDA.LDAModel([' '.join(i) for i in text_list],num_topics,min_count)

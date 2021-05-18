@@ -25,7 +25,7 @@ from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from pdtext.tm import topic_words
 from sklearn.decomposition import LatentDirichletAllocation
 
-def WordCloudDraw(df_tfidf,words_range,picture_path,output_pic_path,mode):
+def WordCloudDraw(df_tfidf,words_range,picture_path,output_pic_path,root_dir,mode):
     word_cn_list_2 = []
 
     for j in range(0,df_tfidf.shape[0]):
@@ -88,7 +88,7 @@ def GetTFIDF(list_words,words_range,min_count):
 
     dict_feature_select=sorted(word_tf_idf.items(),key=operator.itemgetter(1),reverse=True)[:words_range]
     df_tfidf = pd.DataFrame(dict_feature_select, columns=['word', 'TF-IDF']) 
-    # df_tfidf.to_csv('output.csv',index=False)
+    # df_tfidf.to_csv(os.path.join(root_dir,'output.csv'),index=False)
     print (df_tfidf)
     return df_tfidf
 
@@ -239,7 +239,7 @@ if __name__ == '__main__':
     # print (text_list)
     print (len(text_list))
     df_tfidf = GetTFIDF(text_list,words_range,min_count)
-    WordCloudDraw(df_tfidf,words_range,picture_path,output_pic_path,'show')
+    WordCloudDraw(df_tfidf,words_range,picture_path,output_pic_path,root_dir,'show')
     dictionary = Dictionary(text_list)
     corpus = [dictionary.doc2bow(text) for text in text_list]
     ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics=3, id2word = dictionary, passes=20) 
