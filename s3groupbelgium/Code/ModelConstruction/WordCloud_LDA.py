@@ -39,7 +39,7 @@ def WordCloudDraw(df_tfidf,words_range,picture_path,output_pic_path,root_dir,mod
     mask = np.array(Image.open(picture_path))
     wc = WordCloud(
         background_color='white',
-        font_path="C:/WINDOWS/Fonts/TIMES.TTF",
+        font_path="/System/Library/Fonts/Times.ttc",
         mask=mask, 
         max_words=words_range, 
         max_font_size=64, 
@@ -230,7 +230,8 @@ if __name__ == '__main__':
     df = pd.read_csv(root_dir+'heatwaves_twitter.csv')
     text_list = df['text']
     required_pos = ['CD','FW','JJ','JJR','JJS','LS','NN','NNS','NNP','NNPS','RB','UH','VB','WDT']
-    rejected_words = ['heatwave','heatwaves','http','https','isnt','im','tco','dont','amp','ive','thats','didnt','havent','george']
+    rejected_words = ['heatwave','heatwaves','http','https','isnt','im','tco','dont','amp','ive','thats','didnt','havent','george',
+                      'get','take','make','come','go','gonna','say','think','know','start','people','want','cant','thing']
     not_related_words = ['dnf','dream','fcu']
 
     words_dict = {}
