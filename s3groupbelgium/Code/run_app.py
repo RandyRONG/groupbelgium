@@ -496,7 +496,8 @@ picture_path = os.path.join(sc_root,'heatwaves.jpg')
 output_pic_path = os.path.join(sc_root,'output.png')
 df = pd.read_csv(os.path.join(sc_root,'heatwaves_twitter.csv'))
 text_list = df['text']
-rejected_words = ['heatwave','heatwaves','http','https','isnt','im','tco','dont','amp','ive','thats','didnt','havent','george']
+rejected_words = ['heatwave','heatwaves','http','https','isnt','im','tco','dont','amp','ive','thats','didnt','havent','george',
+                    'get','take','make','come','go','gonna','say','think','know','start','people','want','cant','thing']
 not_related_words = ['dnf','dream','fcu']
 
 words_dict = {}
