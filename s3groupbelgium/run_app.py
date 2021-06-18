@@ -694,8 +694,7 @@ def update_chart(changed_indicator,reg_portion_test,reg_portion_valid,reg_k_cv):
 
     Output('LEGraph','figure'),
     Output('results_timeseries','children'),
-    
-    
+   
     [
         Input('myLEindicator', 'value'),
         Input('epochs', 'value'),
