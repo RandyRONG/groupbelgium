@@ -7,14 +7,6 @@ import netCDF4
 from netCDF4 import Dataset
 from tqdm import tqdm
 
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
     root_dir = '../../Data/HeatWaves/'
     nc_path = root_dir+'eu_ht.nc'
