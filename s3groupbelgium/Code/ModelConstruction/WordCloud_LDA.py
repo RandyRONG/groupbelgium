@@ -4,6 +4,7 @@ import re
 import pandas as pd
 import numpy as np
 import matplotlib
+matplotlib.use("qt4agg")
 import matplotlib.pyplot as plt
 import string
 import operator
@@ -39,7 +40,7 @@ def WordCloudDraw(df_tfidf,words_range,picture_path,output_pic_path,root_dir,mod
     mask = np.array(Image.open(picture_path))
     wc = WordCloud(
         background_color='white',
-        font_path="/System/Library/Fonts/Times.ttc",
+        # font_path="/System/Library/Fonts/Times.ttc",
         mask=mask, 
         max_words=words_range, 
         max_font_size=64, 
@@ -191,9 +192,9 @@ def text_prepare(text,rejected_words,not_related_words,words_dict):
     REPLACE_BY_SPACE_RE = re.compile('[/(){}\[\]\|@#+,;]') 
     BAD_SYMBOLS_RE = re.compile('[^0-9a-z #+_]')
     text = REPLACE_BY_SPACE_RE.sub(' ',text) 
+    text = BAD_SYMBOLS_RE.sub(' ',text) 
     remove = str.maketrans('','',string.punctuation) 
     text = text.translate(remove)
-    text = BAD_SYMBOLS_RE.sub(' ',text) 
     for not_related_word in not_related_words:
         if not_related_word in text.split():
             return []
@@ -243,7 +244,7 @@ if __name__ == '__main__':
     WordCloudDraw(df_tfidf,words_range,picture_path,output_pic_path,root_dir,'show')
     dictionary = Dictionary(text_list)
     corpus = [dictionary.doc2bow(text) for text in text_list]
-    ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics=3, id2word = dictionary, passes=20) 
+    ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics=num_topics, id2word = dictionary, passes=20) 
     print(ldamodel.print_topics(num_topics=num_topics, num_words=num_words))
     topic_df = LDAModel([' '.join(i) for i in text_list],num_topics,min_count)
     print (topic_df)

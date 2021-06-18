@@ -8,7 +8,6 @@ import matplotlib.pyplot as plt
 from copy import deepcopy
 
 from sklearn.preprocessing import MinMaxScaler
-from sklearn.metrics import r2_score
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.callbacks import EarlyStopping
@@ -77,8 +76,8 @@ def TimeSeriesNN(epochs,record_indicators,target_name,stat_country,df_time_serie
     y_pred_test_lstm = lstm_model.predict(X_test_lmse)
     y_train_pred_lstm = lstm_model.predict(X_train_lmse)
 
-    print("The R2 score on the Train set is:\t{:0.3f}".format(r2_score(y_train, y_train_pred_lstm)))
-    print("The R2 score on the Test set is:\t{:0.3f}".format(r2_score(y_test, y_pred_test_lstm)))
+    # print("The R2 score on the Train set is:\t{:0.3f}".format(r2_score(y_train, y_train_pred_lstm)))
+    # print("The R2 score on the Test set is:\t{:0.3f}".format(r2_score(y_test, y_pred_test_lstm)))
     # record_indicators[target_name][stat_country]['LSTM_train_R2'] = r2_score(y_train, y_train_pred_lstm)
     # record_indicators[target_name][stat_country]['LSTM_test_R2'] = r2_score(y_test, y_pred_test_lstm)
 

@@ -3,6 +3,12 @@ import pandas as pd
 from pyecharts.charts import Map
 from pyecharts import options as opts
 from pyecharts.charts import Timeline
+from pyecharts.globals import CurrentConfig
+CurrentConfig.ONLINE_HOST = "http://127.0.0.1:8000/assets/"
+## cd pyecharts-assets 
+## python -m http.server
+
+
 
 if __name__ == '__main__':
 

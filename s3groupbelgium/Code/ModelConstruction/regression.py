@@ -3,12 +3,12 @@ import os
 import json
 import numpy as np
 import pandas as pd
-import lightgbm as lgbm
 from sklearn import metrics
 from sklearn import model_selection
 import lightgbm as lgb
 from sklearn.metrics import mean_squared_error
-from math import sqrt
+import matplotlib
+matplotlib.use("qt4agg")
 import matplotlib.pyplot as plt
 
 def LGBMRegression(df,target_name,drop_cols,record_indicators,test_portion,val_portion,cv_search,dict_hw_importance):
@@ -115,16 +115,16 @@ def LGBMRegression(df,target_name,drop_cols,record_indicators,test_portion,val_p
 
     values_train = gbm.predict(train_data, num_iteration=gbm.best_iteration) 
     values_test = gbm.predict(test_data, num_iteration=gbm.best_iteration) 
-    rmse_train = sqrt(mean_squared_error(label_train,values_train))
-    rmse_test = sqrt(mean_squared_error(label_test, values_test))
-    print (target_name,rmse_train,rmse_test)
-    record_indicators[target_name]['MSE_train'] = rmse_train
-    record_indicators[target_name]['MSE_test'] = rmse_test
+    mse_train = mean_squared_error(label_train,values_train)
+    mse_test = mean_squared_error(label_test, values_test)
+    print (target_name,mse_train,mse_test)
+    record_indicators[target_name]['MSE_train'] = mse_train
+    record_indicators[target_name]['MSE_test'] = mse_test
     dict_hw_importance[target_name] = {"importance":importance_dict['heatwaves'][0],
         "importance_portion":round(importance_dict['heatwaves'][0]/total_importance,4),
         "expected_portion":round(1/len(importance_sort),4),
-        "rmse_train":round(rmse_train,4),
-        "rmse_test":round(rmse_test,4)}
+        "mse_train":round(mse_train,4),
+        "mse_test":round(mse_test,4)}
     record_indicators[target_name]['importance_heatwaves'] = {"importance":float(importance_dict['heatwaves'][0]),
         "importance_portion":round(importance_dict['heatwaves'][0]/total_importance,4),
         "expected_portion":round(1/len(importance_sort),4)}
@@ -134,6 +134,7 @@ def LGBMRegression(df,target_name,drop_cols,record_indicators,test_portion,val_p
     plt.scatter(x, values_test, color = 'red', label='predict')
     plt.legend() 
     # plt.show() 
+    plt.close()
 
     return record_indicators
 
